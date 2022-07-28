@@ -1,43 +1,118 @@
-$temp-header-color: green;
-h1 {
-  background-color: $temp-header-color;
-}
-.App {
-  text-align: center;
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+$ps-dark-blue: #00427C;
+$ps-light-blue:  #00B6EF;
+$ps-yellow: #F9CE33;
+$ps-pink:#DE4278;
+$ps-green: #53C0B7;
+$ps-grey:#F4F4F4;
+$pd-secondary: #0075db;
+
+$theme-colors: (
+    "primary":$ps-dark-blue
+);
+
+// :target:before {
+//     content: '';
+//     display: block;
+//     height: 100px;
+//     margin: -50px 0 0;
+// }
+
+
+.ps-active {
+    background: #cfe2ff;
+    color: black;
+    font-weight:500;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.pd-font {
+	font-family: 'Karla', sans-serif;
+}
+.pd-navbar {
+	padding: 5px 0;
+	background: linear-gradient(to right, $pd-secondary, $ps-dark-blue);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.pd-section {
+	margin-top: 1.8rem;
+    margin-left: .5rem;
+	border-bottom: 1px solid $ps-grey;
+	padding-bottom: 1rem;
+    scroll-margin-top: 7rem;
 }
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.pd-section {
+    h2 ,h3 ,h4, h5, h6 {
+        padding-bottom: 1.5rem;
+        
+    }
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.pd-section:last-of-type {
+	padding-bottom: 3rem;
+	border-bottom: 0;
+}
+.sticky-offset-breadcrumbs {
+    top: 61px;
+    background: #fff !important;
+}
+.sticky-offset-leftnav {
+    top: 61px;
+}
+.sticky-offset-sidebar {
+    top: 85px;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+@media print {
+    
+    h1{
+        font-size: 1.5rem;
+    }
+
+    h2,h3,h4,h5,h6 {
+        font-size: 1rem;
+    }
+    #pd-content-area{
+        width:100%;
+        margin-left: 0;
+        padding-top:0;
+        font-size: .7rem;
+    }
+    
+    #pd-top-nav, #pd-breadcrumbs-container {
+        display: none;
+    }
+
+    .page-break-before{
+        page-break-before: always;
+        page-break-inside: avoid;
+    }
+}
+// duplicated print styles for print pdf. will add this class once PDF button is clicked and then remove it when done. 
+.printable{
+    .pd-section{
+        width:100%;
+        margin-left: 0;
+        padding-top:0;
+        font-size: .7rem;
+
+        h1{
+            font-size: 1.5rem;
+        }
+    
+        h2,h3,h4,h5,h6 {
+            font-size: 1rem;
+        }
+    }
+    
+    #pd-top-nav, #pd-breadcrumbs-container {
+        display: none;
+    }
+
+    .page-break-before{
+        page-break-before: always;
+        page-break-inside: avoid;
+    }
 }

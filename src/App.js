@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.scss';
+import '@fontsource/karla';
+import Header from './componets/Header';
 
 function App() {
-	return <h1>PowerDocs</h1>;
+	return <Header />;
 }
 
 export default App;
