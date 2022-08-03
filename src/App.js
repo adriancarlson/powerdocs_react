@@ -11,7 +11,7 @@ function App() {
 	return (
 		<>
 			<Header />
-			<Container id='pd-main' fluid>
+			<Container id='pd-main' fluid className='g-0'>
 				<Row className='g-0'>
 					<LeftNav />
 					<ContentArea />
