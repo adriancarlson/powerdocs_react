@@ -20,7 +20,9 @@ $theme-colors: (
 //     margin: -50px 0 0;
 // }
 
-
+.blank-full-height {
+    height: calc(100vh - 250px);
+}
 .ps-active {
     background: #cfe2ff;
     color: black;

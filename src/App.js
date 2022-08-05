@@ -22,8 +22,8 @@ function App() {
 					<LeftNav />
 					<Routes>
 						<Route path='/' element={<ContentArea />} />
-						{categories.map((category) => {
-							return <Route path={`/${formatRoute(category)}`} element={<ContentArea />} />;
+						{categories.map((category, index) => {
+							return <Route key={index} path={`/${formatRoute(category)}/:name`} element={<ContentArea />} />;
 						})}
 						<Route path='*' element={<NotFound />} />
 					</Routes>
