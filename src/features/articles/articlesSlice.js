@@ -20,6 +20,10 @@ export const selectArticleById = (id) => (state) => {
 	return state.articles.articlesArray.find((article) => article.id === parseInt(id));
 };
 
+export const selectArticleByName = (name) => (state) => {
+	return state.articles.articlesArray.find((article) => article.name === name);
+};
+
 export const selectArticlesByCategory = (category) => (state) => {
 	return state.articles.articlesArray.filter((article) => article.category === category);
 };

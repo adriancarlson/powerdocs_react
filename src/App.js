@@ -8,6 +8,7 @@ import Header from './componets/Header';
 import LeftNav from './componets/LeftNav';
 import ContentArea from './componets/ContentArea';
 import NotFound from './pages/NotFound';
+import Welcome from './pages/Welcome';
 import RightNav from './componets/RightNav';
 import { selectArticleCategories } from './features/articles/articlesSlice';
 import { formatRoute } from './utils/formatRoute';
@@ -21,7 +22,7 @@ function App() {
 				<Row className='g-0'>
 					<LeftNav />
 					<Routes>
-						<Route path='/' element={<ContentArea />} />
+						<Route path='/' element={<Welcome />} />
 						{categories.map((category, index) => {
 							return <Route key={index} path={`/${formatRoute(category)}/:name`} element={<ContentArea />} />;
 						})}

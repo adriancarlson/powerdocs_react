@@ -3,6 +3,31 @@ export const ARTICLES = [
 		id: 0,
 		name: 'Common Start Page Searches',
 		category: 'Every Day',
+		description: 'Search for student records using fields, comparator symbols, and text to locate the student or students based on matching attributes.',
+		last_updated: '8/9/22',
+		body: `<div class="container-fluid">
+		<div class="row">
+			<div class="col-8">
+				<table class="table table-primary text-center">
+					<thead>
+						<tr>
+							<th scope="col">[Field name]</th>
+							<th scope="col">[Comparator]</th>
+							<th scope="col">[What you are looking for]</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="table-light">
+							<td>first_name</td>
+							<td>=</td>
+							<td>Adrian</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col"></div>
+		</div>
+	</div>`,
 	},
 	{
 		id: 1,

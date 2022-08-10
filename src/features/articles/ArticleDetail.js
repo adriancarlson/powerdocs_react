@@ -1,9 +1,20 @@
-const ArticleDetail = ({ articleName }) => {
+import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import { Row } from 'react-bootstrap';
+import { deFormatRoute } from '../../utils/formatRoute';
+import { selectArticleByName } from './articlesSlice';
+
+const ArticleDetail = () => {
+	const { name: articleName } = useParams();
+	const article = useSelector(selectArticleByName(deFormatRoute(articleName)));
 	return (
-		<div id='pd-section-0' className='pd-section'>
-			<h1 className='mb-4'>Welcome from Component {articleName}</h1>
-			<p className='blank-full-height'>Welcome to PowerDocs. Please click a guide in the Left side bar</p>
-		</div>
+		article && (
+			<Row className='pd-section'>
+				<h1 className='mb-4'>{article.name}</h1>
+				<p>{article.description}</p>
+				<p>{article.body}</p>
+			</Row>
+		)
 	);
 };
 export default ArticleDetail;

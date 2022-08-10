@@ -13,12 +13,7 @@ const ArticlesList = ({ category }) => {
 			<>
 				{articles.map((article) => {
 					return (
-						<NavLink
-							key={article.id}
-							to={`/${formatRoute(category)}/${formatRoute(article.name)}`}
-							className={({ isActive }) => (isActive ? activeClassName : regularLinkClasses)}
-							state={article.name}
-						>
+						<NavLink key={article.id} to={`/${formatRoute(category)}/${formatRoute(article.name)}`} className={({ isActive }) => (isActive ? activeClassName : regularLinkClasses)}>
 							{article.name}
 						</NavLink>
 					);
