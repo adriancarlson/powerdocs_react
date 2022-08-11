@@ -16,6 +16,6 @@ export const selectSectionById = (id) => (state) => {
 	return state.sections.sectionsArray.find((section) => section.id === parseInt(id));
 };
 
-export const selectSectionByArticleId = (articleId) => (state) => {
-	return state.sections.sectionsArray.find((section) => section.article_id === parseInt(articleId));
+export const selectSectionsByArticleId = (articleId) => (state) => {
+	return state.sections.sectionsArray.filter((section) => section.article_id === parseInt(articleId));
 };
