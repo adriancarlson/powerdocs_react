@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import { Row } from 'react-bootstrap';
 import { selectSectionsByArticleId } from './sectionsSlice';
+import { formatRoute } from '../../utils/formatRoute';
 
 const SectionDetailList = ({ articleId }) => {
 	const sections = useSelector(selectSectionsByArticleId(articleId));
@@ -10,7 +11,7 @@ const SectionDetailList = ({ articleId }) => {
 				{sections.map((section, index) => {
 					if (section.header) {
 						return (
-							<Row key={index} className='pd-section'>
+							<Row key={index} className='pd-section' id={formatRoute(section.header)}>
 								<h2 className='mb-4'>{section.header}</h2>
 								<p>{section.body}</p>
 							</Row>

@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { selectSectionsByArticleId } from './sectionsSlice';
-import { ListGroup } from 'react-bootstrap';
+import { formatRoute } from '../../utils/formatRoute';
 const SectionsList = ({ articleId }) => {
 	const sections = useSelector(selectSectionsByArticleId(articleId));
 	if (sections && sections.length > 0) {
@@ -9,11 +9,12 @@ const SectionsList = ({ articleId }) => {
 				{sections.map((section, index) => {
 					if (section.header) {
 						return (
-							<ListGroup.Item key={index} action variant='light' className='rounded-2 border-bottom-0'>
+							<a href={`#${formatRoute(section.header)}`} class='list-group-item list-group-item-action list-group-item-light rounded-2 border-bottom-0' key={index}>
 								{section.header}
-							</ListGroup.Item>
+							</a>
 						);
 					}
+					return <></>;
 				})}
 			</>
 		);
