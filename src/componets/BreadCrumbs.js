@@ -8,7 +8,7 @@ const BreadCrumbs = () => {
 	const { name: articleName } = useParams();
 	const article = useSelector(selectArticleByName(deFormatRoute(articleName)));
 	return (
-		<Row id='pd-breadcrumbs-container' className='border-bottom mt-2 sticky-top sticky-offset-breadcrumbs'>
+		<Row id='pd-breadcrumbs-container' className='border-bottom sticky-top sticky-offset-breadcrumbs'>
 			<Col id='pd-breadcrumbs' className='col-auto me-auto'>
 				<Breadcrumb>
 					<Breadcrumb.Item href='https://powerschool.cdolinc.net/admin/'>Start Page</Breadcrumb.Item>
