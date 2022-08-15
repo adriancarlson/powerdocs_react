@@ -9,7 +9,7 @@ const ContentArea = () => {
 		<>
 			<LeftNav />
 			<Col id='pd-content-area' lg='8'>
-				<Container fluid>
+				<Container fluid className='pb-5'>
 					<BreadCrumbs />
 					<Row>
 						<ArticleDetail />
