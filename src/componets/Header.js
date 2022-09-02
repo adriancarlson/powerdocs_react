@@ -18,7 +18,7 @@ const Header = () => {
 					<button id='pd-pdf-btn' className='btn btn-outline-light btn-lg'>
 						<FaFilePdf />
 					</button>
-					<button id='pd-prnt-btn' className='btn btn-outline-light btn-lg'>
+					<button id='pd-prnt-btn' className='btn btn-outline-light btn-lg' onClick={(e) => window.print()}>
 						<BsPrinterFill />
 					</button>
 				</div>

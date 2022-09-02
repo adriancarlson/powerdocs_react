@@ -31,9 +31,9 @@ const SectionDetailList = ({ article }) => {
 									>
 										<span>
 											{isCopied === index ? (
-												<BsClipboardCheck color='#0075db' size='.75em' className={`ms-2 ${isCopied === index ? '' : 'hidden'}`} />
+												<BsClipboardCheck color='#0075db' size='.75em' className={`pd-clipboard ms-2 ${isCopied === index ? '' : 'hidden'}`} />
 											) : (
-												<ImLink color='#0075db' size='.75em' className={`ms-2 ${isHovering === index ? '' : 'hidden'}`} />
+												<ImLink color='#0075db' size='.75em' className={`pd-link ms-2 ${isHovering === index ? '' : 'hidden'}`} />
 											)}
 										</span>
 									</CopyToClipboard>

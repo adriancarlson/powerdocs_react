@@ -13,13 +13,6 @@ $theme-colors: (
     "primary":$ps-dark-blue
 );
 
-// :target:before {
-//     content: '';
-//     display: block;
-//     height: 100px;
-//     margin: -50px 0 0;
-// }
-
 .hidden {
     display: none;
 }
@@ -87,10 +80,23 @@ $theme-colors: (
         font-size: .7rem;
     }
     
-    #pd-top-nav, #pd-breadcrumbs-container {
-        display: none;
+    .pd-section {
+        margin-top: .75rem;
+        border-bottom: 1px solid $ps-grey;
+        padding-bottom: 0;
     }
 
+    .pd-section {
+        h2 ,h3 ,h4, h5, h6 {
+            padding-bottom: 0;
+            
+        }
+    }
+
+    #pd-top-nav, #pd-breadcrumbs-container, .pd-navbar, .pd-clipboard, .pd-link{
+        display: none;
+    }
+    
     .page-break-before{
         page-break-before: always;
         page-break-inside: avoid;
