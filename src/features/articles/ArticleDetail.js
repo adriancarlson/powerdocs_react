@@ -16,7 +16,7 @@ const ArticleDetail = () => {
 					<p>{article.description}</p>
 					<p>{article.body}</p>
 				</Row>
-				<SectionDetailList articleId={article.id} />
+				<SectionDetailList article={article} />
 			</>
 		)
 	);

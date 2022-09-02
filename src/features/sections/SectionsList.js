@@ -14,7 +14,7 @@ const SectionsList = ({ articleId }) => {
 							</a>
 						);
 					}
-					return <></>;
+					return <div key='-1'></div>;
 				})}
 			</>
 		);
