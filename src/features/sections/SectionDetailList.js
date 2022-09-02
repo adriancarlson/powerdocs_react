@@ -23,10 +23,9 @@ const SectionDetailList = ({ article }) => {
 							<Row key={index} className='pd-section' id={formatRoute(section.header)}>
 								<h2 className='mb-4' onMouseOver={() => setIsHovering(index)} onMouseOut={() => setIsHovering(-1)}>
 									{section.header}
-
 									<CopyToClipboard
 										onCopy={() => setIsCopied(index)}
-										text={`Start Page > PowerSchool Tips > ${article.category} > ${article.name} > ${section.header} \r ${window.location.href.replace(window.location.hash, '')}#${formatRoute(
+										text={`Start Page > PowerSchool Tips > ${article.category} > ${article.name} > ${section.header}\r${window.location.href.replace(window.location.hash, '')}#${formatRoute(
 											section.header,
 										)}`}
 									>
