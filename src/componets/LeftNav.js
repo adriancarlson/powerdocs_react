@@ -3,12 +3,11 @@ import { Col, Accordion } from 'react-bootstrap';
 import ArticlesList from '../features/articles/ArticlesList';
 import { selectArticleCategories } from '../features/articles/articlesSlice';
 
-const LeftNav = () => {
+const LeftNav = ({ article }) => {
 	const categories = useSelector(selectArticleCategories);
-
 	return (
 		<Col lg='2' className='d-none d-lg-block border-end'>
-			<Accordion flush className='sticky-top sticky-offset-leftnav'>
+			<Accordion flush defaultActiveKey={article && article.category} className='sticky-top sticky-offset-leftnav'>
 				{categories.map((category, index) => {
 					return (
 						<Accordion.Item key={index} eventKey={category}>
