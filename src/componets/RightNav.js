@@ -1,15 +1,8 @@
 import { Col, Container, Row, ListGroup } from 'react-bootstrap';
-import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
-import { selectArticleByName } from '../features/articles/articlesSlice';
 import SectionsList from '../features/sections/SectionsList';
-import { deFormatRoute } from '../utils/formatRoute';
 import { HashLink } from 'react-router-hash-link';
 
-const RightNav = () => {
-	const { name: articlePath } = useParams();
-	const article = useSelector(selectArticleByName(deFormatRoute(articlePath)));
-
+const RightNav = ({ article }) => {
 	if (article) {
 		const { name: articleName, id: articleId } = article;
 		return (
@@ -21,7 +14,7 @@ const RightNav = () => {
 							<HashLink smooth to='#top' className='list-group-item list-group-item-action list-group-item-light rounded-2 border-bottom-0'>
 								{articleName}
 							</HashLink>
-							<SectionsList articleId={articleId} />
+							<SectionsList article={article} />
 						</ListGroup>
 					</Row>
 				</Container>

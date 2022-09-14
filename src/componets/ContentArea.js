@@ -22,7 +22,7 @@ const ContentArea = () => {
 					</Row>
 				</Container>
 			</Col>
-			<RightNav />
+			<RightNav article={article} />
 		</>
 	);
 };

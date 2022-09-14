@@ -2,12 +2,10 @@ import { useSelector } from 'react-redux';
 import { selectSectionsByArticleId } from './sectionsSlice';
 import { formatRoute } from '../../utils/formatRoute';
 import { HashLink } from 'react-router-hash-link';
-import { selectArticleById } from '../articles/articlesSlice';
 
-const SectionsList = ({ articleId }) => {
-	const article = useSelector(selectArticleById(articleId));
-	const sections = useSelector(selectSectionsByArticleId(articleId));
-	
+const SectionsList = ({ article }) => {
+	const sections = useSelector(selectSectionsByArticleId(article.id));
+
 	if (sections && sections.length > 0) {
 		return (
 			<>
