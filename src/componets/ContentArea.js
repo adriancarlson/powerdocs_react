@@ -16,7 +16,7 @@ const ContentArea = () => {
 			<LeftNav article={article} />
 			<Col id='pd-content-area' lg='8'>
 				<Container fluid className='pb-5'>
-					<BreadCrumbs />
+					<BreadCrumbs article={article} />
 					<Row>
 						<ArticleDetail />
 					</Row>

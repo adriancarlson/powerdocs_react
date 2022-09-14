@@ -1,12 +1,5 @@
-import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
 import { Col, Row, Breadcrumb } from 'react-bootstrap';
-import { deFormatRoute } from '../utils/formatRoute';
-import { selectArticleByName } from '../features/articles/articlesSlice';
-
-const BreadCrumbs = () => {
-	const { name: articleName } = useParams();
-	const article = useSelector(selectArticleByName(deFormatRoute(articleName)));
+const BreadCrumbs = ({ article }) => {
 	return (
 		<Row id='pd-breadcrumbs-container' className='border-bottom sticky-top sticky-offset-breadcrumbs'>
 			<Col id='pd-breadcrumbs' className='col-auto me-auto'>
@@ -21,7 +14,7 @@ const BreadCrumbs = () => {
 					)}
 				</Breadcrumb>
 			</Col>
-			<Col className='col-auto'>{article && <p className='fst-italic text-muted text-end'>Last Updated: {article.last_updated}</p>}</Col>
+			<Col className='col-auto'>{article && article.last_updated && <p className='fst-italic text-muted text-end'>Last Updated: {article.last_updated}</p>}</Col>
 		</Row>
 	);
 };
