@@ -8,11 +8,10 @@ import { ImLink } from 'react-icons/im';
 import { BsClipboardCheck } from 'react-icons/bs';
 
 const SectionDetailList = ({ article }) => {
-	const { id: articleId } = article;
 	const [isHovering, setIsHovering] = useState(-1);
 	const [isCopied, setIsCopied] = useState(-1);
 
-	const sections = useSelector(selectSectionsByArticleId(articleId));
+	const sections = useSelector(selectSectionsByArticleId(article.id));
 
 	if (sections && sections.length > 0) {
 		return (

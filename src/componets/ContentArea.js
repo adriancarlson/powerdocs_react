@@ -18,7 +18,7 @@ const ContentArea = () => {
 				<Container fluid className='pb-5'>
 					<BreadCrumbs article={article} />
 					<Row>
-						<ArticleDetail />
+						<ArticleDetail article={article} />
 					</Row>
 				</Container>
 			</Col>

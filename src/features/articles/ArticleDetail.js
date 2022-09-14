@@ -1,20 +1,14 @@
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
 import { Row } from 'react-bootstrap';
-import { deFormatRoute } from '../../utils/formatRoute';
-import { selectArticleByName } from './articlesSlice';
 import SectionDetailList from '../sections/SectionDetailList';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { ImLink } from 'react-icons/im';
 import { BsClipboardCheck } from 'react-icons/bs';
 
-const ArticleDetail = () => {
-	const { name: articleName } = useParams();
+const ArticleDetail = ({ article }) => {
 	const [isHovering, setIsHovering] = useState(-1);
 	const [isCopied, setIsCopied] = useState(-1);
 
-	const article = useSelector(selectArticleByName(deFormatRoute(articleName)));
 	return (
 		article && (
 			<>
