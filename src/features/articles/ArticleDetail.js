@@ -21,7 +21,7 @@ const ArticleDetail = () => {
 				<Row className='pd-section'>
 					<h1 className='mb-4' onMouseOver={() => setIsHovering(article.id)} onMouseOut={() => setIsHovering(-1)}>
 						{article.name}
-						<CopyToClipboard onCopy={() => setIsCopied(article.id)} text={`Start Page > PowerSchool Tips > ${article.category} > ${article.name}`}>
+						<CopyToClipboard onCopy={() => setIsCopied(article.id)} text={`Start Page > PowerSchool Tips > ${article.category} > ${article.name}\r${window.location.href}`}>
 							<span>
 								{isCopied === article.id ? (
 									<BsClipboardCheck color='#0075db' size='.65em' className={`ms-2 ${isCopied === article.id ? '' : 'hidden'}`} />
