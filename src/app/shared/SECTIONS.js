@@ -55,7 +55,7 @@ export const SECTIONS = [
 				<div className='container-fluid prnt-remove-float'>
 					<div className='row prnt-remove-float'>
 						<div className='prnt-remove-float'>
-							<table className='table table-light table-striped page-break-before'>
+							<table className='table table-light table-striped page-break-before pdf-table'>
 								<thead>
 									<tr className='table-primary'>
 										<th scope='col'>Search Command</th>

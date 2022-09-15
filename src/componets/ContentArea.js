@@ -17,7 +17,7 @@ const ContentArea = () => {
 			<Col id='pd-content-area' lg='8'>
 				<Container fluid className='pb-5'>
 					<BreadCrumbs article={article} />
-					<Row>
+					<Row id='pd-to-pdf'>
 						<ArticleDetail article={article} />
 					</Row>
 				</Container>

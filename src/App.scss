@@ -118,7 +118,18 @@ $theme-colors: (
             font-size: 1rem;
         }
     }
-    
+    .pd-section {
+        margin-top: .75rem;
+        border-bottom: 1px solid $ps-grey;
+        padding-bottom: 0;
+    }
+
+    .pd-section {
+        h2 ,h3 ,h4, h5, h6 {
+            padding-bottom: 0;
+            
+        }
+    }
     #pd-top-nav, #pd-breadcrumbs-container {
         display: none;
     }
@@ -126,5 +137,8 @@ $theme-colors: (
     .page-break-before{
         page-break-before: always;
         page-break-inside: avoid;
+    }
+    .pdf-table{
+        font-size: 0.75rem;
     }
 }
